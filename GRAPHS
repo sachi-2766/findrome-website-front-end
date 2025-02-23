@@ -1,0 +1,31 @@
+import yfinance as yf
+import plotly.graph_objects as go
+
+indices = {
+    "NIFTY 50": "^NSEI",
+    "SENSEX": "^BSESN",
+    "BANKNIFTY": "^NSEBANK",
+    "MIDCAP 150": "^CRSMID",
+    "NIFTY NEXT 50": "^NSMIDCP",
+}
+
+data_dict = {}
+for name, ticker in indices.items():
+    try:
+        data = yf.Ticker(ticker).history(period="10y")
+        if not data.empty:
+            data_dict[name] = data["Close"]
+    except Exception as e:
+        print(f"Error fetching data for {name}: {e}")
+
+for name, data in data_dict.items():
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=data.index, y=data, mode="lines", name=name))
+
+    fig.update_layout(
+        title=f"{name} Performance Over 10 Years",
+        xaxis_title="Year",
+        yaxis_title="Closing Price"
+    )
+
+    fig.show()
