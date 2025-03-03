@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .navbar {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: black;
+            padding: 10px 30px;
+            border-radius: 30px;
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+    
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+    
+        .navbar a:hover {
+            color: #ddd;
+        }
+    </style>
+    
+
+    <script>
+        function addToTextbox(text) {
+            const textbox = document.querySelector('textarea');
+            textbox.value += text + ' ';
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Screener</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-gray-900 to-black text-white min-h-screen flex flex-col pt-20">
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="screener.html">Screener</a>
+        <a href="learnmore.html">Learn More</a>
+        <a href="indices.html">Indices</a>
+    </div>
+
+
+    <div class="flex justify-center items-start flex-grow mt-10 space-x-10">
+        <textarea class="bg-gray-200 text-black w-[28%] h-60 p-4 text-xl shadow-lg rounded-2xl text-center resize-none" placeholder="Type your Input here..."></textarea>
+
+        <div class="grid grid-cols-3 gap-8 ml-10 mt-4">
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('PE')"$1>PE</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('EPS')"$1>EPS</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('Quick Ratio')"$1>Quick</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('Current Ratio')"$1>Current</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('Market Cap')"$1>Market Cap</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('Dividend Yield')"$1>D/Y</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('ROE')"$1>ROE</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('ROA')"$1>ROA</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('DMA 50')"$1>DMA 50</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('DMA 200')"$1>DMA 200</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('Debt To Equity')"$1>D2E</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('Net Profit')"$1>Profit</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('52 Week High')"$1>52H</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('52 Week Low')"$1>52L</button>
+    <button class="bg-green-500 rounded-2xl px-6 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('AND')"$1>AND</button>
+    
+    
+    
+</div>
+
+        <div class="flex flex-col space-y-6 ml-10">
+    <button class="bg-green-500 rounded-[50px] px-8 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('PPS1')"$1>Predefined Parameters Set 1</button>
+    <button class="bg-green-500 rounded-[50px] px-8 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('PPS2')"$1>Predefined Parameters Set 2</button>
+    <button class="bg-green-500 rounded-[50px] px-8 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('PPS3')"$1>Predefined Parameters Set 3</button>
+    <button class="bg-green-500 rounded-[50px] px-8 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('PPS4')"$1>Predefined Parameters Set 4</button>
+    <button class="bg-green-500 rounded-[50px] px-8 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('PPS5')"$1>Predefined Parameters Set 5</button>
+    <button class="bg-green-500 rounded-[50px] px-8 py-3 hover:bg-green-600 shadow-md" onclick="addToTextbox('PPS6')"$1>Predefined Parameters Set 6</button>
+    
+
+</div>
+
+    </div>
+
+    <div class="flex justify-center mt-4 mb-12">
+        <button class="bg-green-500 rounded-[50px] px-10 py-3 hover:bg-green-600 shadow-md">Run</button>
+    </div>
+</body>
+</html>

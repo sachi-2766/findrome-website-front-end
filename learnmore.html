@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Financial Ratios</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #003344, #330044);
+      color: #fff;
+      padding-top: 110px; 
+    }
+
+    .navbar {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: black;
+      padding: 10px 30px;
+      border-radius: 30px;
+      display: flex;
+      gap: 20px;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+    }
+
+    .navbar a:hover {
+      color: #ddd;
+    }
+
+    .sub-nav {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 30px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centers the links inside the bar */
+        position: fixed;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%); /* Centers the entire bar */
+        width: max-content; /* Adjusts the width based on content */
+        z-index: 900;
+      }
+      
+    .sub-nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 30px;
+      margin-right: 30px;
+      font-weight: bold;
+    }
+    .sub-nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      background-color: rgba(0, 0, 0, 0.4);
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    section h1 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+
+    .formula {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+      margin: 15px 0;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .anchor-offset {
+      position: relative;
+      top: -140px;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="screener.html">Screener</a>
+        <a href="learnmore.html">Learn More</a>
+        <a href="indices.html">Indices</a>
+    </div>
+
+  <div class="sub-nav">
+    <a href="#eps">EPS</a>
+    <a href="#roce">ROCE</a>
+    <a href="#netprofit">Net Profit</a>
+    <a href="#roe">ROE</a>
+    <a href="#dividendyield">Dividend Yield</a>
+    <a href="#marketcap">Market Cap</a>
+    <a href="#currentratio">Current Ratio</a>
+    <a href="#quickratio">Quick Ratio</a>
+    <a href="#debtequity">Debt to Equity</a>
+    <a href="#rsi">RSI</a>
+    <a href="#dma">DMA</a>
+  </div>
+
+  <div class="container">
+    <div id="eps" class="anchor-offset"></div>
+    <section>
+      <h1>EPS (Earnings Per Share)</h1>
+      <p>
+        EPS (Earnings Per Share) is a measure of a company's profitability on a per-share basis. 
+        It is one of the most commonly used metrics for determining the financial health of a company. 
+        It shows how much profit is allocated to each outstanding share of common stock.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        EPS = Net Income / Number of Shares
+      </div>
+      <p>
+        A higher EPS generally indicates better financial performance and profitability. Investors often use EPS to gauge the potential for growth in earnings and determine whether the stock is under or overvalued. EPS can be calculated on a quarterly or annual basis, with earnings growth often being a key factor in stock price appreciation.
+      </p>
+    </section>
+
+    <div id="roce" class="anchor-offset"></div>
+    <section>
+      <h1>ROCE (Return on Capital Employed)</h1>
+      <p>
+        ROCE (Return on Capital Employed) is a financial metric that measures a company’s ability to generate profits from its capital. It helps assess how efficiently a company is using its capital (debt and equity) to generate earnings. ROCE is particularly useful for comparing companies in capital-intensive industries.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        ROCE = (EBIT / Total Capital Employed) * 100
+      </div>
+      <p>
+        A higher ROCE indicates that the company is using its capital effectively to generate profits, and a company with a consistently high ROCE may be more efficient at deploying its resources. Conversely, a low ROCE can suggest that the company is not generating sufficient profits relative to its capital employed.
+      </p>
+    </section>
+
+    <div id="netprofit" class="anchor-offset"></div>
+    <section>
+      <h1>Net Profit</h1>
+      <p>
+        Net profit refers to the total earnings of a company after all expenses, taxes, and costs have been deducted from its total revenue. It’s a crucial indicator of a company’s overall profitability and financial performance.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        Net Profit = Total Revenue - Total Expenses
+      </div>
+      <p>
+        Net profit is often referred to as the "bottom line" because it appears at the bottom of a company’s income statement. Positive net profit indicates that a company is generating more income than it is spending, while a negative net profit (loss) suggests that the company is spending more than it earns. Net profit is important for investors as it provides an accurate snapshot of the company’s financial health.
+      </p>
+    </section>
+
+    <div id="roe" class="anchor-offset"></div>
+    <section>
+      <h1>ROE (Return on Equity)</h1>
+      <p>
+        ROE (Return on Equity) measures a company's profitability in relation to shareholders’ equity. It indicates how effectively a company is using the money invested by its shareholders to generate earnings. A high ROE typically means the company is efficient at generating profit with the investment provided by its shareholders.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        ROE = (Net Income / Shareholders' Equity) * 100
+      </div>
+      <p>
+        Investors use ROE to assess the potential return on their investments. A high ROE can be a sign of good management and business performance, as it shows the company is generating strong profits from its equity. However, very high ROE might indicate that a company is using excessive debt, which can be risky. Comparing ROE to industry averages is essential for a more accurate evaluation.
+      </p>
+    </section>
+
+    <div id="dividendyield" class="anchor-offset"></div>
+    <section>
+      <h1>Dividend Yield</h1>
+      <p>
+        Dividend yield is a financial ratio that shows how much income a company is returning to its shareholders in the form of dividends relative to its stock price. It is an important metric for income-focused investors who are looking for regular income from their investments, rather than just capital appreciation.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        Dividend Yield = (Annual Dividends per Share / Price per Share) * 100
+      </div>
+      <p>
+        A higher dividend yield typically indicates a more generous return on investment, though it can sometimes signal that the stock price has dropped, or the company is not reinvesting enough of its profits for growth. Dividend yield should be considered alongside other factors like payout ratios and company growth prospects when making investment decisions.
+      </p>
+    </section>
+
+    <div id="marketcap" class="anchor-offset"></div>
+    <section>
+      <h1>Market Cap (Market Capitalization)</h1>
+      <p>
+        Market capitalization, or market cap, represents the total market value of a company's outstanding shares of stock. It is a simple way to gauge the size of a company in terms of its total value on the market.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        Market Cap = Share Price * Number of Outstanding Shares
+      </div>
+      <p>
+        Market cap is often categorized into different segments: Large Cap, Mid Cap, and Small Cap. It helps investors understand the relative size of a company and is used to compare companies in the same industry or sector.
+      </p>
+    </section>
+
+    <div id="currentratio" class="anchor-offset"></div>
+    <section>
+      <h1>Current Ratio</h1>
+      <p>
+        The current ratio is a liquidity ratio that measures a company's ability to pay its short-term obligations using its short-term assets. It is a key indicator of a company's financial health and its ability to meet its short-term liabilities.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        Current Ratio = Current Assets / Current Liabilities
+      </div>
+      <p>
+        A current ratio of less than 1 suggests that the company may struggle to meet its short-term debts, while a ratio above 1 indicates that the company has enough short-term assets to cover its liabilities. However, an excessively high current ratio might indicate that the company is not effectively utilizing its assets.
+      </p>
+    </section>
+
+    <div id="quickratio" class="anchor-offset"></div>
+    <section>
+      <h1>Quick Ratio (Acid-Test Ratio)</h1>
+      <p>
+        The quick ratio is a more stringent measure of liquidity than the current ratio, as it excludes inventory from current assets. This ratio gives a clearer picture of a company’s ability to meet its short-term obligations with its most liquid assets.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        Quick Ratio = (Current Assets - Inventory) / Current Liabilities
+      </div>
+      <p>
+        A quick ratio greater than 1 suggests that the company can cover its short-term liabilities with its liquid assets, even if it faces difficulty in selling its inventory. A ratio of less than 1 indicates potential liquidity problems.
+      </p>
+    </section>
+
+    <div id="debtequity" class="anchor-offset"></div>
+    <section>
+      <h1>Debt to Equity</h1>
+      <p>
+        The debt-to-equity ratio measures the relative proportion of debt and equity used to finance a company’s assets. It is an important indicator of a company’s financial leverage and its ability to handle debt.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        Debt to Equity = Total Liabilities / Shareholders’ Equity
+      </div>
+      <p>
+        A higher debt-to-equity ratio indicates that a company is using more debt to finance its operations, which can be risky during times of economic downturn. A lower ratio suggests that the company is less reliant on debt and may be more financially stable. Investors typically seek a balanced ratio that indicates both prudent debt use and healthy equity levels.
+      </p>
+    </section>
+
+    <div id="rsi" class="anchor-offset"></div>
+    <section>
+      <h1>RSI (Relative Strength Index)</h1>
+      <p>
+        RSI is a momentum oscillator that measures the speed and change of price movements. It is used to identify overbought or oversold conditions in a stock or market. RSI values range from 0 to 100, with values above 70 indicating that a stock may be overbought, and values below 30 suggesting that it may be oversold.
+      </p>
+      <div class="formula">
+        <strong>Formula:</strong><br />
+        RSI = 100 – [100 / (1 + RS)]<br />
+        where RS = Average Gain of up periods / Average Loss of down periods
+      </div>
+      <p>
+        RSI helps investors assess the potential for price reversals and can be used in conjunction with other technical indicators. A reading above 70 may signal a possible pullback, while a reading below 30 might suggest a potential rebound.
+      </p>
+    </section>
+
+    <div id="dma" class="anchor-offset"></div>
+    <section>
+      <h1>DMA (Daily Moving Average)</h1>
+      <p>
+        The Daily Moving Average (DMA) is a statistical calculation used to smooth out daily price fluctuations and identify trends over a specified period. The most common types of moving averages are the Simple Moving Average (SMA) and the Exponential Moving Average (EMA).
+      </p>
+      <div class="formula">
+        <strong>Formula for SMA:</strong><br />
+        SMA = (Sum of stock’s closing prices over a period) / Number of observations in that period
+      </div>
+      <p>
+        A moving average helps to reduce the "noise" in price data and provides a clearer picture of price trends. It is often used in technical analysis to identify support and resistance levels, as well as to confirm or signal trend changes.
+      </p>
+    </section>
+  </div>
+
+</body>
+</html>
