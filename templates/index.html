@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Index Performance</title>
+    <style>
+        button {
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stock Indices Performance</h1>
+        
+        <!-- Buttons to choose the time period -->
+        <form method="POST">
+            <div>
+                {% for key, value in time_periods.items() %}
+                    <button type="submit" name="period" value="{{ value }}" {% if period == value %}style="background-color: #ccc;"{% endif %}>
+                        {{ key }}
+                    </button>
+                {% endfor %}
+            </div>
+        </form>
+
+        <!-- Display the plot for each index -->
+        {% for plot_html in plot_htmls %}
+            <div>
+                <!-- Display each plot -->
+                {{ plot_html|safe }}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
